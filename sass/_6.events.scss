@@ -1,0 +1,11 @@
+.events {
+	margin-top: -6rem;
+	grid-column: center-start / center-end;
+	bottom: 2rem;
+	color: red;
+	background-color: #444;
+	// display: grid;
+	// grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	height: 30rem;
+	z-index: 10;
+}

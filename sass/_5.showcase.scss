@@ -1,0 +1,64 @@
+.showcase {
+	grid-column: container-start / container-end;
+	background: linear-gradient(
+		rgba(0, 0, 0, 0.08),
+		rgba(0, 0, 0, 0.08),
+		), url(../img/showcase/imagen-1.jpg);
+	margin-top: 2rem;
+	position: relative;
+	@extend %bg;
+	@extend %sec-padding;
+	
+	color: var(--color-primary);
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		z-index: 1;
+		margin-left: 10rem;
+		margin-right: 40rem;
+		padding: 0 1rem;
+		
+		&--subtitle {
+			font-size: 1rem;
+			text-transform: uppercase;
+			line-height: 1.5rem;
+		}
+		
+		&--title {
+			font-size: 3.2rem;
+			text-transform: uppercase;
+			line-height: 3.5rem;
+			margin-bottom: 2rem;
+			font-weight: 800;
+		}
+
+		&--para {
+			font-size: 1.5rem;
+			line-height: 2rem;
+		}
+
+		&--links {
+			text-transform: uppercase;
+			font-weight: 700;
+			text-align: center;
+			border-radius: 0.6rem;
+			font-size: 1rem;
+			padding: calc(0.5rem + .5vh) calc(.5rem + .5vw);
+			background-color: var(--color-primary);
+			margin-top: 1rem;
+			transition: all 0.1s ease-in-out;
+
+			&:hover,
+			&:active {
+				background-color: var(--color-quinary);
+				color: var(--color-primary);
+			}
+		}
+	}
+}
