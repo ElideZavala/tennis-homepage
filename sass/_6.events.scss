@@ -2,10 +2,52 @@
 	margin-top: -6rem;
 	grid-column: center-start / center-end;
 	bottom: 2rem;
-	color: red;
-	background-color: #444;
-	// display: grid;
-	// grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-	height: 30rem;
+	background-color: transparent;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-gap: 1vh calc(1rem + 1vw);
+	place-items: center;
 	z-index: 10;
+	
+	&--card {
+		display: grid;
+		position: relative;
+		height: 30rem;
+		width: 30rem;
+		border-radius: 5px;
+		overflow: hidden;
+		box-shadow: 0 0 2px var(--color-tertiary-m);
+		margin-bottom: 10rem;
+
+		&__text {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			text-overflow: ellipsis;
+			margin: 1rem;
+
+			&--city {
+				letter-spacing: 1px;
+				font-weight: 800;
+			}
+
+			&--info {
+				font-size: 1.5rem;
+				line-height: 2rem;
+				text-transform: uppercase;
+			}
+
+			&--date {
+				font-size: .5rem;
+				font-weight: 300;
+			}
+		}
+
+		&__img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			transition: all 0.5s ease-in-out;
+		}
+	}
 }
