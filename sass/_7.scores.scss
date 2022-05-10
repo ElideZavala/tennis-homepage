@@ -19,6 +19,11 @@
 			font-size: 1rem;
 			color: var(--color-secondary);
 			font-weight: 700;
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				color: var(--color-quinary)
+			}
 		}
 	}
 
@@ -39,6 +44,57 @@
 
 			&__content {
 
+				&--bottons {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					
+					& img {
+						width: 4.5rem;
+						filter: invert(1);
+						// height: 2rem;
+					}
+
+					&__match,
+					&__channel--1,
+					&__channel--2 {
+						margin: 1rem;
+						text-transform: uppercase;
+						box-shadow: 0 4px 6px var(--color-tertiary-m);
+						
+						&:hover {
+							background-color: var(--color-quinary);
+							color: var(--color-primary);
+						}
+					}
+					
+					&__match {
+						border-radius: 5px;
+						padding: .5rem 2rem;
+						background-color: var(--color-primary);
+						color: var(--color-secondary);
+						font-weight: 700;
+						transition: all 0.3s ease-in-out;
+
+					}
+					
+					&__channel--1,
+					&__channel--2 {
+						border-radius: 2rem;
+						font-size: 1.5rem;
+						padding: .5rem 2.5rem;
+					}
+					
+					&__channel--1 {
+						background-color: var(--color-secondary);
+						color: var(--color-primary);
+					}
+
+					&__channel--2 {
+						background-color: var(--color-sixtary);
+						color: var(--color-primary);
+					}
+				}
 			}
 		}
 	}
@@ -47,9 +103,37 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-bottom: 2.4rem;
-		
+		margin: 2.4rem;
+		color: var(--color-secondary);
+		font-size: 1.5rem;
+		font-weight: 700;
+
 		&--dir {
+			display: flex;
+			align-items: center;
+			position: relative;
+
+			&__line {
+				padding: 0 8rem;
+				
+				& span {
+					top: 0;
+					left: 0;
+					margin: 1rem;
+					position: absolute;
+					display: block;
+					// align-self: stretch;
+					// position: static;
+					// font-size: 0;
+				}
+				
+				& > span {
+					height: 0.2rem;
+					white-space: nowrap;
+					width: 3.6rem;
+					background-color: var(--color-secondary);
+				}
+			}
 		}
 	}
 }
