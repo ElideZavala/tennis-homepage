@@ -32,6 +32,10 @@ a:visited {
   text-decoration: none;
 }
 
+i {
+  padding: 5px;
+}
+
 .header__nav {
   grid-column: container-start/container-end;
   background-color: var(--color-primary);
@@ -66,5 +70,4 @@ a:visited {
   display: flex;
   align-items: center;
   padding: 1rem;
-  color: var(--color-secondary);
 }/*# sourceMappingURL=main-style.css.map */
