@@ -1,0 +1,32 @@
+// *-*-*-*-*-*-*-*-*-*-*-* Font-Size *-*-*-*-*-*-*-*-*-*-*-*-*
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+// *-*-*-*-*-*-*-*-*-*-*-* Colors *-*-*-*-*-*-*-*-*-*-*-*-*
+
+// Light Color Palette (Custom Properties)
+html {
+	--color-primary: #fff;
+	--color-secondary: #018141;
+	// --color-secondary-m: #fcc0498d;
+	--color-quaternary:#003049;
+	// --color-quaternary-m:#002f49c4;
+	--color-tertiary: #666666;
+	--color-tertiary-m: #999;
+	--color-quinary: #66cc33;
+	--color-quinary-m: #eae2b7aa;
+	// --color-seven: #00ffc3;
+}
+
+// Dark Color Palette (Custom Properties)
+// html[data-theme="dark"] {
+// 	--color-primary: #000814;
+// 	--color-primary-m: #000814c8;
+// 	--color-secondary:#003566;
+// 	--color-secondary-m:#0035668c;
+// 	--color-tertiary: #001d3d;
+// 	--color-tertiary-m: #001d3dc4;
+// 	--color-quaternary: #006664;
+// 	--color-quaternary-m: #006664ab;
+// 	--color-quinary: #ffd60a;
+// 	--color-quinary-m: #ffd60abb;
+// }

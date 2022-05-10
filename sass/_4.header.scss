@@ -1,0 +1,47 @@
+.header {
+	&__nav {
+		grid-column: container-start / container-end;
+		background-color: var(--color-primary);
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 5rem;
+		overflow: hidden;
+		font-family: 'Poppins', sans-serif;
+		font-weight: 700;
+		font-size: 1rem; // 1.4 rem 
+		line-height: 2rem;
+		letter-spacing: 2.5px;
+		// border-bottom: 2px solid var(--color-tertiary);
+		box-shadow: 0 0px 8px var(--color-tertiary-m);
+
+		&--log {
+			img {
+				height: 8rem;
+				width: 8rem;
+			}
+		}
+
+		&--links {
+			display: flex;
+			align-items: center;
+			padding: 2rem;	
+			
+			&__first {
+				display: flex;
+				align-items: center;
+				padding: 2rem;
+				
+			}
+			
+			&__second {
+				display: flex;
+				align-items: center;
+				padding: 1rem;
+				color: var(--color-secondary);
+			}
+		}
+
+	}
+}
