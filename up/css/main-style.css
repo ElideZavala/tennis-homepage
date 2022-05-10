@@ -9,7 +9,8 @@
 
 html {
   --color-primary: #fff;
-  --color-secondary: #018141;
+  --color-secondary: #26762c;
+  --color-secondary-m: #018141;
   --color-quaternary:#003049;
   --color-tertiary: #666666;
   --color-tertiary-m: #999;
@@ -121,6 +122,7 @@ i {
   background-color: var(--color-primary);
   margin-top: 1rem;
   transition: all 0.1s ease-in-out;
+  cursor: pointer;
 }
 .showcase__content--links:hover, .showcase__content--links:active {
   background-color: var(--color-quinary);
@@ -146,7 +148,7 @@ i {
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 0 2px var(--color-tertiary-m);
-  margin-bottom: 10rem;
+  transition: all 0.5s ease-in-out;
 }
 .events--card__text {
   display: flex;
@@ -174,7 +176,49 @@ i {
   object-fit: cover;
   transition: all 0.5s ease-in-out;
 }
+.events--card:hover {
+  box-shadow: 0 0 10px var(--color-tertiary-m);
+}
 
+.scores {
+  grid-column: center-start/center-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.scores__head {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  margin: 4rem 0;
+}
+.scores__head--title {
+  font-size: 2.5rem;
+}
+.scores__head a {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+.scores__live {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-gap: 1vh calc(1rem + 1vw);
+  align-items: flex-start;
+}
+.scores__live--card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 0 2px var(--color-tertiary-m);
+  height: 20vh;
+}
+.scores__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.4rem;
+}
 .showcase {
   background-size: cover;
   background-repeat: no-repeat;
