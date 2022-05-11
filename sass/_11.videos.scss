@@ -1,5 +1,8 @@
 .videos {
 	grid-column: center-start / center-end;
+	// display: flex;
+	// flex-direction: column;
+	margin: 2rem;
 
 	&__head {
 		@extend %head;
@@ -17,12 +20,28 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 		grid-gap: .5vh calc(.5rem + .5vw);
-
+		
 		&--card {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			@extend %shadow;
+			
+			&__info {
+				@extend %info;
+				margin: 1rem 1rem 0; 
+			}
+
+			&__para {
+				font-size: font-size(font-size-small);
+				font-family: 'Poppins', sans-serif;
+				letter-spacing: 0.5px;
+				font-weight: 500;
+				margin: 1rem;
+			}
 
 			img {
 				@extend %img;
-				border-radius: 5px;
 			}
 		}
 	}

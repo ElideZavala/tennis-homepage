@@ -147,7 +147,6 @@ i {
   position: relative;
   height: 30rem;
   width: 30rem;
-  border-radius: 5px;
   overflow: hidden;
 }
 .events--card__text {
@@ -273,7 +272,6 @@ i {
 .play-today__dates--card {
   display: flex;
   flex-direction: column;
-  border-radius: 5px;
 }
 .play-today__dates--card__date {
   position: relative;
@@ -286,9 +284,6 @@ i {
   left: 8px;
   background-color: var(--color-secondary);
 }
-.play-today__dates--card__date img {
-  border-radius: 5px;
-}
 .play-today__dates--card__par {
   padding: 0 1rem;
   background-color: var(--color-secondary);
@@ -300,10 +295,6 @@ i {
 }
 .play-today__dates--card__info {
   padding: 1rem;
-  font-size: calc(1rem + 0.5vw);
-  text-transform: uppercase;
-  font-weight: 600;
-  line-height: 1;
 }
 .play-today__dates--card__city {
   padding: 1rem 0;
@@ -324,14 +315,41 @@ i {
 
 .videos {
   grid-column: center-start/center-end;
+  margin: 2rem;
 }
 .videos__cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   grid-gap: 0.5vh calc(0.5rem + 0.5vw);
 }
-.videos__cards--card img {
-  border-radius: 5px;
+.videos__cards--card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.videos__cards--card__info {
+  margin: 1rem 1rem 0;
+}
+.videos__cards--card__para {
+  font-size: calc(0.3rem + 0.5vw);
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  margin: 1rem;
+}
+.week {
+  grid-column: center-start/center-end;
+  margin: 2rem;
+}
+.week__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 0.5vh calc(0.5rem + 0.5vw);
+}
+.week__cards--card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .showcase {
@@ -366,26 +384,36 @@ i {
   width: 100%;
   object-fit: cover;
   transition: all 0.5s ease-in-out;
+  border-radius: 5px 5px 0 0;
 }
 
-.events--card, .play-today__dates--card {
+.events--card, .play-today__dates--card, .videos__cards--card {
+  border-radius: 5px;
   box-shadow: 0 0 2px var(--color-tertiary-m);
   transition: all 0.5s ease-in-out;
 }
-.events--card:hover, .play-today__dates--card:hover {
+.events--card:hover, .play-today__dates--card:hover, .videos__cards--card:hover {
   box-shadow: 0 0 10px var(--color-tertiary-m);
 }
 
-.scores__head, .play-today__head, .videos__head {
+.scores__head, .play-today__head, .videos__head, .week__head {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
 }
 
-.scores__head--title, .play-today__head--title, .videos__head--title {
+.scores__head--title, .play-today__head--title, .videos__head--title, .week__head--title {
   text-transform: uppercase;
   font-size: calc(1rem + 1vw);
   padding: 2rem 0;
+  line-height: 2rem;
+}
+
+.play-today__dates--card__info, .videos__cards--card__info {
+  text-transform: uppercase;
+  font-size: calc(1rem + 0.5vw);
+  font-weight: 600;
+  line-height: 2rem;
 }
 
 .scores__head a, .play-today__head a, .videos__head a {

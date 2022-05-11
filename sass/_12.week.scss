@@ -1,0 +1,23 @@
+.week {
+	grid-column: center-start / center-end;
+	margin: 2rem;
+	
+	&__head {
+		@extend %head;
+
+		&--title {
+			@extend %title;
+		}
+	}
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+		grid-gap: .5vh calc(.5rem + .5vw);
+		
+		&--card {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	}
+}
