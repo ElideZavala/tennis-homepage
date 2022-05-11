@@ -9,10 +9,12 @@
 			@extend %title;
 		}
 	}
+
 	&__cards {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 		grid-gap: .5vh calc(.5rem + .5vw);
+		margin-bottom: 2rem;
 		
 		&--card {
 			display: flex;
@@ -65,5 +67,30 @@
 				@extend %img;
 			}
 		}
+	}
+
+	&__more {
+		text-transform: uppercase;
+		font-weight: 800;
+		letter-spacing: .8px;
+		color: var(--color-secondary);
+		background-color: var(--color-primary);
+		cursor: pointer;
+		padding: .7rem 1rem;
+		border-radius: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto;
+		outline: none;
+		border: 1px solid var(--color-secondary);
+		transition: all 0.3s ease-in-out;
+
+		&:hover,
+		&:active {
+			background-color: var(--color-quinary);
+			color: var(--color-primary);
+		}
+
 	}
 }
