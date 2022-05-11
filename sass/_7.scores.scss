@@ -54,10 +54,16 @@
 						filter: invert(1);
 						// height: 2rem;
 					}
-
-					&__match,
+					
+					&__match {
+						@extend %button;
+					}
+					
 					&__channel--1,
 					&__channel--2 {
+						border-radius: 2rem;
+						font-size: 1.5rem;
+						padding: .5rem 2.5rem;
 						margin: 1rem;
 						text-transform: uppercase;
 						box-shadow: 0 4px 6px var(--color-tertiary-m);
@@ -66,23 +72,6 @@
 							background-color: var(--color-quinary);
 							color: var(--color-primary);
 						}
-					}
-					
-					&__match {
-						border-radius: 5px;
-						padding: .5rem 2rem;
-						background-color: var(--color-primary);
-						color: var(--color-secondary);
-						font-weight: 700;
-						transition: all 0.3s ease-in-out;
-
-					}
-					
-					&__channel--1,
-					&__channel--2 {
-						border-radius: 2rem;
-						font-size: 1.5rem;
-						padding: .5rem 2.5rem;
 					}
 					
 					&__channel--1 {

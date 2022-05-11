@@ -7,13 +7,13 @@
 	margin: 3rem;
 
 	&__title {
-		font-size: 2rem;
+		font-size: font-size(font-size-large);
 		font-weight: 800;
 		text-transform: uppercase;
 	}
 
 	&__para {
-		font-size: 1rem;
+		font-size: font-size(font-size-regular);
 		line-height: 3rem;
 		letter-spacing: 0.8px;
 	}

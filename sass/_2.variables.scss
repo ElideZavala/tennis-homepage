@@ -13,7 +13,7 @@ html {
 	--color-quaternary:#003049;
 	--color-quinary: #66cc33;
 	--color-sixtary: #ff7606;
-	// --color-quinary-m: #eae2b7aa;
+	--color-seventery: #f2f2f2;
 }
 
 // Dark Color Palette (Custom Properties)
@@ -29,3 +29,16 @@ html {
 // 	--color-quinary: #ffd60a;
 // 	--color-quinary-m: #ffd60abb;
 // }
+
+// *-*-*-*-*-*-*-*-*-*- Font Size *-*-*-*-*-*-*-*-*-*-*-*-*
+$font-sizes: (
+	'font-size-small': calc(.3rem + 0.5vw),
+	'font-size-regular': calc(.5rem + 0.5vw),
+	'font-size-medium': calc(1rem + 0.5vw),
+	'font-size-large': calc(1rem + 1vw),
+	'font-size-xlarge': calc(1.5rem + 2vw),
+);
+
+@function font-size($font-size-style) {
+	@return map-get($font-sizes, $font-size-style) 
+};

@@ -1,0 +1,31 @@
+.draws {
+	grid-column: center-start / center-end;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	margin: 2rem;
+
+	&__question {
+		background-color: var(--color-seventery);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 2rem;
+
+
+ 		&--title {
+			text-transform: uppercase;
+			font-size: font-size(font-size-large);
+		}
+
+		&--para {
+			font-size: font-size(font-size-small);
+			letter-spacing: 0.8px;
+		}
+
+		&--button {
+			@extend  %button;
+		}
+
+	}
+}

@@ -1,23 +1,41 @@
 @import "1.reset";
 @import "2.variables";
-@import "3.utilities";  
-@import "4.header";  
-@import "5.showcase";  
-@import "6.events";  
-@import "7.scores";  
-@import "8.resume";  
+@import "3.utilities";
+@import "4.header";
+@import "5.showcase";
+@import "6.events";
+@import "7.scores";
+@import "8.resume";
+@import "9.draws";
+@import "10.playToday";
 
 // *-*-*-*-*-**-*-*-*-*-*-* placeholder Styles *-*-*-*-*-*-**-*-*-*-*-*-*
-// Background Properties 
+// Background Properties
 %bg {
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: 40% 20%;
-	background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 40% 20%;
+  background-attachment: fixed;
 }
 
 // Background Properties
 %sec-padding {
-	padding: 6vh 4vw;
+  padding: 6vh 4vw;
 }
 
+%button {
+  margin: 1rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px var(--color-tertiary-m);
+  
+  &:hover {
+    background-color: var(--color-quinary);
+    color: var(--color-primary);
+  }
+}
