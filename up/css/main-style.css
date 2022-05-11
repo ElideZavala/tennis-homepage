@@ -149,8 +149,6 @@ i {
   width: 30rem;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 0 2px var(--color-tertiary-m);
-  transition: all 0.5s ease-in-out;
 }
 .events--card__text {
   display: flex;
@@ -172,39 +170,11 @@ i {
   font-size: 0.5rem;
   font-weight: 300;
 }
-.events--card__img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  transition: all 0.5s ease-in-out;
-}
-.events--card:hover {
-  box-shadow: 0 0 10px var(--color-tertiary-m);
-}
-
 .scores {
   grid-column: center-start/center-end;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-.scores__head {
-  display: flex;
-  justify-content: space-between;
-  text-transform: uppercase;
-  margin: 4rem 0;
-}
-.scores__head--title {
-  font-size: 2.5rem;
-}
-.scores__head a {
-  font-size: 1rem;
-  color: var(--color-secondary);
-  font-weight: 700;
-  transition: all 0.3s ease-in-out;
-}
-.scores__head a:hover {
-  color: var(--color-quinary);
 }
 .scores__live {
   display: grid;
@@ -248,37 +218,6 @@ i {
   background-color: var(--color-sixtary);
   color: var(--color-primary);
 }
-.scores__buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2.4rem;
-  color: var(--color-secondary);
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-.scores__buttons--dir {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.scores__buttons--dir__line {
-  padding: 0 8rem;
-}
-.scores__buttons--dir__line span {
-  top: 0;
-  left: 0;
-  margin: 1rem;
-  position: absolute;
-  display: block;
-}
-.scores__buttons--dir__line > span {
-  height: 0.2rem;
-  white-space: nowrap;
-  width: 3.6rem;
-  background-color: var(--color-secondary);
-}
-
 .resume {
   grid-column: center-start/center-end;
   display: flex;
@@ -320,6 +259,81 @@ i {
   font-size: calc(0.3rem + 0.5vw);
   letter-spacing: 0.8px;
 }
+.play-today {
+  grid-column: center-start/center-end;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+.play-today__dates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 0.5vh calc(0.5rem + 0.5vw);
+}
+.play-today__dates--card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.play-today__dates--card__date {
+  position: relative;
+}
+.play-today__dates--card__date--agenda {
+  position: absolute;
+  width: 8rem;
+  height: 5rem;
+  top: 0;
+  left: 8px;
+  background-color: var(--color-secondary);
+}
+.play-today__dates--card__date img {
+  border-radius: 5px;
+}
+.play-today__dates--card__par {
+  padding: 0 1rem;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  font-size: calc(0.3rem + 0.5vw);
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.play-today__dates--card__info {
+  padding: 1rem;
+  font-size: calc(1rem + 0.5vw);
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1;
+}
+.play-today__dates--card__city {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: start;
+  margin: 0 1rem;
+}
+.play-today__dates--card__city i {
+  font-size: calc(0.5rem + 0.5vw);
+}
+.play-today__dates--card__city span {
+  margin: 0.5rem;
+  font-size: calc(0.5rem + 0.5vw);
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.videos {
+  grid-column: center-start/center-end;
+}
+.videos__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 0.5vh calc(0.5rem + 0.5vw);
+}
+.videos__cards--card img {
+  border-radius: 5px;
+}
+
 .showcase {
   background-size: cover;
   background-repeat: no-repeat;
@@ -345,4 +359,53 @@ i {
 .scores__live--card__content--bottons__match:hover, .draws__question--button:hover {
   background-color: var(--color-quinary);
   color: var(--color-primary);
+}
+
+.events--card__img, .play-today__dates--card__date img, .videos__cards--card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+.events--card, .play-today__dates--card {
+  box-shadow: 0 0 2px var(--color-tertiary-m);
+  transition: all 0.5s ease-in-out;
+}
+.events--card:hover, .play-today__dates--card:hover {
+  box-shadow: 0 0 10px var(--color-tertiary-m);
+}
+
+.scores__head, .play-today__head, .videos__head {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.scores__head--title, .play-today__head--title, .videos__head--title {
+  text-transform: uppercase;
+  font-size: calc(1rem + 1vw);
+  padding: 2rem 0;
+}
+
+.scores__head a, .play-today__head a, .videos__head a {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--color-secondary);
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+.scores__head a:hover, .play-today__head a:hover, .videos__head a:hover {
+  color: var(--color-quinary);
+}
+
+.scores__carrousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.4rem;
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  font-weight: 700;
 }/*# sourceMappingURL=main-style.css.map */

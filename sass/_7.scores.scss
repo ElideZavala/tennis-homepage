@@ -6,24 +6,14 @@
 	// padding: 1rem;
 	
 	&__head {
-		display: flex;
-		justify-content: space-between;
-		text-transform: uppercase;
-		margin: 4rem 0;
+		@extend %head;
 
 		&--title {
-			font-size: 2.5rem;
+			@extend %title;
 		}
 
 		& a{
-			font-size: 1rem;
-			color: var(--color-secondary);
-			font-weight: 700;
-			transition: all 0.3s ease-in-out;
-
-			&:hover {
-				color: var(--color-quinary)
-			}
+			@extend %arrow;
 		}
 	}
 
@@ -43,7 +33,6 @@
 			height: 20vh;
 
 			&__content {
-
 				&--bottons {
 					display: flex;
 					flex-direction: column;
@@ -87,42 +76,7 @@
 			}
 		}
 	}
-
-	&__buttons {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: 2.4rem;
-		color: var(--color-secondary);
-		font-size: 1.5rem;
-		font-weight: 700;
-
-		&--dir {
-			display: flex;
-			align-items: center;
-			position: relative;
-
-			&__line {
-				padding: 0 8rem;
-				
-				& span {
-					top: 0;
-					left: 0;
-					margin: 1rem;
-					position: absolute;
-					display: block;
-					// align-self: stretch;
-					// position: static;
-					// font-size: 0;
-				}
-				
-				& > span {
-					height: 0.2rem;
-					white-space: nowrap;
-					width: 3.6rem;
-					background-color: var(--color-secondary);
-				}
-			}
-		}
+	&__carrousel {
+		@extend %carousel;
 	}
 }

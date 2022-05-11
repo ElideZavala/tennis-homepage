@@ -16,8 +16,7 @@
 		width: 30rem;
 		border-radius: 5px;
 		overflow: hidden;
-		box-shadow: 0 0 2px var(--color-tertiary-m);
-		transition: all 0.5s ease-in-out;
+		@extend %shadow;
 
 		&__text {
 			display: flex;
@@ -44,14 +43,7 @@
 		}
 
 		&__img {
-			height: 100%;
-			width: 100%;
-			object-fit: cover;
-			transition: all 0.5s ease-in-out;
-		}
-
-		&:hover {
-			box-shadow: 0 0 10px var(--color-tertiary-m);
+			@extend %img;
 		}
 	}
 }

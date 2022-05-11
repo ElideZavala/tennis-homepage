@@ -8,6 +8,8 @@
 @import "8.resume";
 @import "9.draws";
 @import "10.playToday";
+@import "11.videos";
+
 
 // *-*-*-*-*-**-*-*-*-*-*-* placeholder Styles *-*-*-*-*-*-**-*-*-*-*-*-*
 // Background Properties
@@ -37,5 +39,81 @@
   &:hover {
     background-color: var(--color-quinary);
     color: var(--color-primary);
+  }
+}
+
+%img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+}
+
+%shadow {
+  box-shadow: 0 0 2px var(--color-tertiary-m);
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 10px var(--color-tertiary-m);
+  }
+}
+
+%head {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+%title {
+  text-transform: uppercase;
+  font-size: font-size(font-size-large);
+  padding: 2rem 0;
+}
+
+%arrow {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--color-secondary);
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--color-quinary)
+  }
+}
+
+%carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.4rem;
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  &--dir {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &__line {
+      padding: 0 8rem;
+      
+      & span {
+        top: 0;
+        left: 0;
+        margin: 1rem;
+        position: absolute;
+        display: block;
+      }
+      
+      & > span {
+        height: 0.2rem;
+        white-space: nowrap;
+        width: 3.6rem;
+        background-color: var(--color-secondary);
+      }
+    }
   }
 }

@@ -1,0 +1,29 @@
+.videos {
+	grid-column: center-start / center-end;
+
+	&__head {
+		@extend %head;
+
+		&--title {
+			@extend %title;
+		}
+
+		& a{
+			@extend %arrow;
+		}
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+		grid-gap: .5vh calc(.5rem + .5vw);
+
+		&--card {
+
+			img {
+				@extend %img;
+				border-radius: 5px;
+			}
+		}
+	}
+}
